@@ -1,0 +1,33 @@
+button {
+    font: inherit;
+    background: #ff2058;
+    padding: 0.5rem 2rem;
+    color: white;
+    border: 1px solid #ff2058;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+    will-change: background, color;
+
+    @include states(){
+        background: white;
+        color: #ff2058;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &.button-outline{
+        background: white;
+        color: #ff2058;
+
+        @include states(){
+            background: #ff2058;
+            color: white;
+            box-shadow: none;
+        }
+    }
+}
+  

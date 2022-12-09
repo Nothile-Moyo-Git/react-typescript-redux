@@ -1,0 +1,7 @@
+@mixin state(){
+    &:hover, &:focus{ @content; }
+}
+
+@mixin states(){
+    &:hover, &:active{ @content; }
+}

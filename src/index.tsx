@@ -1,19 +1,26 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { Provider } from 'react-redux';
+import { combineReducers, createStore } from 'redux';
+import { BrowserRouter } from 'react-router-dom';
+
+import './index.scss';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import productReducer from './store/reducers/products';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const rootReducer = combineReducers({
+  shop: productReducer
+});
+
+const store = createStore(rootReducer);
+
+// Root element, uses a non-null assertion at the end for guarding
+const rootElement : HTMLElement = document.getElementById("root")!;
+
+const root = ReactDOM.createRoot(rootElement);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <BrowserRouter basename="/react-typescript-redux">
+      <App />
+    </BrowserRouter>
+  </Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

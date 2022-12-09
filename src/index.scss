@@ -1,0 +1,11 @@
+@import "./styles/Shared.scss";
+
+* {
+  box-sizing: border-box;
+  transition: $standard_transition;
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
