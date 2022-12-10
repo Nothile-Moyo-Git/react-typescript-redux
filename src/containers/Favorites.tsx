@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import FavoriteItem from '../components/Favorites/FavoriteItem';
-import './Products.css';
+import './Products.scss';
 
 // Product interface to make our objects more explicit
 interface Product {

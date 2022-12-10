@@ -1,7 +1,6 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
 import ProductItem from '../components/Products/ProductItem';
-import './Products.css';
+import './Products.scss';
 
 // Product interface to make our objects more explicit
 interface Product {

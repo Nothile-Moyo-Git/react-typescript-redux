@@ -1,0 +1,18 @@
+@import "../../styles/Shared.scss";
+
+.product-item{
+
+  h2 {
+    font-size: 1.15rem;
+    margin: 0.25rem 0;
+
+    &.is-fav{
+      color: $brand_color_pink;
+    }
+  }
+
+  p{
+    margin: 0.25rem 0;
+  }
+
+}
