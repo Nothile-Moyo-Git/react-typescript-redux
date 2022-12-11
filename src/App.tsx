@@ -10,8 +10,7 @@ const App = (props : any) => {
 
   return (
     <Layout>
-      <Navigation />
- 
+      <Navigation /> 
         <Routes>
           <Route path="/" element={<ProductsPage/>} />
           <Route path="/favorites" element={<FavoritesPage/>} />

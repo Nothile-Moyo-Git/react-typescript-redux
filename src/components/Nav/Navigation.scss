@@ -3,9 +3,35 @@
 .main-header {
   height: 3.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: $brand_color_pink;
+  padding: 0 0.5rem;
+
+  &__logo{
+    color: white;
+    display: flex;
+    align-items: center;
+    grid-column-gap: 0.5rem;
+    font-weight: 400;
+    font-size: 1.1rem;
+    filter: contrast(90%);
+    transition: $standard_transition;
+
+    will-change: filter;
+
+    @include states{
+      filter: contrast(100%);
+    }
+
+    svg{
+      width: 25px;
+      height: 25px;
+
+      will-change: transform;
+      animation: shake 3s linear infinite;
+    }
+  }
 
   nav {
     height: 100%;
@@ -32,10 +58,8 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-
-    @include states(){
-      color: $brand_color_purple;
-    }
+    padding-bottom: 0.1rem;
+    transition: $quick_transition;
   }
 }
 

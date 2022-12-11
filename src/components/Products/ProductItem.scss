@@ -2,17 +2,20 @@
 
 .product-item{
 
-  h2 {
-    font-size: 1.15rem;
-    margin: 0.25rem 0;
+  color: white;
 
-    &.is-fav{
-      color: $brand_color_pink;
-    }
+  .is-fav{
+    color: $brand_color_pink__alt_1;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin: 0.25rem 0;
   }
 
   p{
     margin: 0.25rem 0;
+    font-size: 1.1rem;
   }
 
 }
