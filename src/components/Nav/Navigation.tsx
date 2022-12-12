@@ -1,3 +1,9 @@
+/**
+ * Navigation component
+ * Currently has the logo, title and menu on the right hand side
+ * Menu uses the react-burger-menu with the "scale-rotate" option chosen
+ */
+
 import { NavLink } from 'react-router-dom';
 import { GiChewedHeart } from "react-icons/gi";
 import './Navigation.scss';
@@ -11,17 +17,6 @@ const Navigation = (props : any) => {
         <GiChewedHeart/>
         React Favouites
       </NavLink>
-
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/">All Products</NavLink>
-          </li>
-          <li>
-            <NavLink to="/favorites">Favorites</NavLink>
-          </li>
-        </ul>
-      </nav>
 
     </header>
   );

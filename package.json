@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-burger-menu": "^2.8.3",
     "gh-pages": "^4.0.0"
   }
 }

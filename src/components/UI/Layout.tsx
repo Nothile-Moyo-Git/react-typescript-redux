@@ -6,7 +6,7 @@ const Layout = (props :  any) => {
         <main className="layout">
             <div className="layout__backdrop"/>
 
-            <section className="layout__content">
+            <section className="layout__content" id="outer-wrap">
                 {props.children}
             </section>
         </main>
