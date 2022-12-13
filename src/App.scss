@@ -1,12 +1,44 @@
 @import "./styles/Shared.scss";
 
+.bm-menu{
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        grid-row-gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.1rem;
+        align-items: center;
+        grid-column-gap: 0.5rem;
+        height: 30px;
+    }
+
+    svg{
+        width: 20px;
+        height: 20px;
+        animation: shake 5s linear infinite;
+    }
+}
+
 .bm-burger-button{
     z-index: 1000;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.5rem;
+    right: 0.5rem;
     width: 30px;
     height: 30px;
+
+    
 }
 
 .burger-menu{
@@ -16,4 +48,17 @@
     right: 0;
     width: 30px;
     height: 30px;
+}
+
+.bm-menu-wrap{
+    background: $brand_color_pink;
+}
+
+#page-wrap{
+    background: $backdrop_color_one;
+    min-height: 100vh;
+}
+
+.fade-in{
+    animation: fade-in 0.75s linear;
 }

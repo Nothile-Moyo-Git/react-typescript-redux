@@ -6,6 +6,9 @@ import ProductsPage from './containers/Products';
 import FavoritesPage from './containers/Favorites';
 import Layout from './components/UI/Layout';
 import { scaleRotate as Menu } from 'react-burger-menu'
+import BurgerMenu from './assets/BurgerMenu';
+import { BsFillHandbagFill } from "react-icons/bs";
+import { MdFavorite } from "react-icons/md";
 
 const App = (props : any) => {
 
@@ -20,17 +23,34 @@ const App = (props : any) => {
 
   };
 
+  console.log(toggleMenu);
+
   return (
     <Layout>
+
+      {
+        !toggleMenu &&
+        <BurgerMenu toggleMenuHandler={toggleMenuHandler}/>
+      }
 
       <Menu 
         pageWrapId="page-wrap" 
         outerContainerId="outer-wrap" 
         right
-        onStateChange={toggleMenuHandler}
+        onClose={toggleMenuHandler}
+        isOpen={toggleMenu}
+        className={`${toggleMenu && "fade-in"}`}
       >
-        <NavLink to="/">All Products</NavLink>
-        <NavLink to="/favorites">Favorites</NavLink>
+
+        <NavLink to="/">
+          <BsFillHandbagFill/>
+          <p>All Products</p>
+        </NavLink>
+
+        <NavLink to="/favorites">
+          <MdFavorite/>
+          <p>Favorites</p>
+        </NavLink>
       </Menu>
 
       <div id="page-wrap"> 

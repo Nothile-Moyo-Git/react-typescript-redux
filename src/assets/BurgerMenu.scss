@@ -1,0 +1,20 @@
+@import "../styles/Shared.scss";
+
+.burger-menu{
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    animation: fade-in 0.75s linear;
+    transition: $standard_transition;
+    filter: contrast(0.75);
+    -webkit-filter: contrast(75%);
+    cursor: pointer;
+    z-index: 1105;
+
+    will-change: filter;
+
+    @include state(){
+        filter: contrast(1);
+        -webkit-filter: contrast(100%);
+    }
+}
