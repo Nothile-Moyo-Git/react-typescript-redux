@@ -21,6 +21,7 @@
         align-items: center;
         grid-column-gap: 0.5rem;
         height: 30px;
+        outline: 0;
     }
 
     svg{
@@ -51,6 +52,7 @@
 }
 
 .bm-menu-wrap{
+    transition: transform 0.5s linear;
     background: $brand_color_pink;
 }
 
