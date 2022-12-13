@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react-typescript-redux/static/css/main.41abb170.css",
+    "main.css": "/react-typescript-redux/static/css/main.1fa4acba.css",
     "main.js": "/react-typescript-redux/static/js/main.385618f0.js",
     "index.html": "/react-typescript-redux/index.html",
-    "main.41abb170.css.map": "/react-typescript-redux/static/css/main.41abb170.css.map",
+    "main.1fa4acba.css.map": "/react-typescript-redux/static/css/main.1fa4acba.css.map",
     "main.385618f0.js.map": "/react-typescript-redux/static/js/main.385618f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.41abb170.css",
+    "static/css/main.1fa4acba.css",
     "static/js/main.385618f0.js"
   ]
 }
