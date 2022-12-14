@@ -9,3 +9,20 @@ html, body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(30, 32, 42);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $brand_color_purple;
+  border-radius: 4px;
+}

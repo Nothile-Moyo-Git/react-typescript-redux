@@ -18,6 +18,7 @@ const Navigation = (props : any) => {
         React Favouites
       </NavLink>
 
+      <div className="main-header__background"/>
     </header>
   );
   

@@ -42,7 +42,7 @@ const App = (props : any) => {
         className={`${toggleMenu && "fade-in"}`}
       >
 
-        <NavLink to="/">
+        <NavLink to="/" >
           <BsFillHandbagFill/>
           <p>All Products</p>
         </NavLink>

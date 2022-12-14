@@ -1,12 +1,12 @@
 @import "./styles/Shared.scss";
 
 .bm-menu{
+    position: relative;
+    z-index: 1100;
 
     nav{
         display: flex;
         flex-direction: column;
-        grid-row-gap: 0.5rem;
-        padding: 1rem;
     }
 
     a{
@@ -20,8 +20,14 @@
         font-size: 1.1rem;
         align-items: center;
         grid-column-gap: 0.5rem;
-        height: 30px;
         outline: 0;
+        transition: $standard_transition;
+        padding: 1rem;
+        max-height: 3rem;
+
+        &.active{
+            background: $brand_color_purple;
+        }
     }
 
     svg{
@@ -34,8 +40,8 @@
 .bm-burger-button{
     z-index: 1000;
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 0.8rem;
+    right: 0.75rem;
     width: 30px;
     height: 30px;
 
@@ -54,6 +60,22 @@
 .bm-menu-wrap{
     transition: transform 0.5s linear;
     background: $brand_color_pink;
+
+    &:before{
+        content: 'Yo';
+        position: absolute;
+        left: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        color: white;
+        z-index: 1000;
+    }
+
+    @include breakpoint(mobile){
+        width: 100% !important;
+    }
 }
 
 #page-wrap{
@@ -62,5 +84,5 @@
 }
 
 .fade-in{
-    animation: fade-in 0.75s linear;
+    animation: fade-in 0.5s ease-in;
 }

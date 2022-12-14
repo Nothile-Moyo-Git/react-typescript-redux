@@ -2,11 +2,22 @@
 
 .main-header {
   height: 3.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: $brand_color_pink;
-  padding: 0 0.5rem;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+
+  &__background{
+    position: relative;
+    width: 400%;
+    height: 100%;
+    background: white;
+    animation: efficient-gradient 5s linear infinite;
+    background: $brand_gradient_pink;
+    bottom: 100%;
+    will-change: transform;
+    z-index: 1;
+  }
 
   &__logo{
     color: white;
@@ -17,6 +28,11 @@
     font-size: 1.1rem;
     filter: contrast(90%);
     transition: $standard_transition;
+    height: 100%;
+    margin-right: auto;
+    padding: 0 0.5rem;
+    z-index: 5;
+    position: relative;
 
     will-change: filter;
 
