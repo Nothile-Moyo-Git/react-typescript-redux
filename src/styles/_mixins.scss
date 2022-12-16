@@ -5,3 +5,42 @@
 @mixin states(){
     &:hover, &:active{ @content; }
 }
+
+/* 
+    Background gradient effect
+    This hover effect creates an efficient and smooth gradient animation
+    It is currently optimized for modern browsers by avoiding repainting
+    It also takes advantage of the GPU as much as possible
+    To use this, pass through your linear gradient and set the z-index of the parent to at least 1
+    If you want to delay this animation, pass it to the parent using an inline style
+    This can be great if you're rendering a list of cards and want to delay each animation
+*/
+
+@mixin backgroundGradientEffect(){
+    &:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 400%;
+        z-index: 0;
+
+        will-change: transform;
+
+        animation-name: efficient-gradient;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: inherit;
+
+        -webkit-animation-name: efficient-gradient;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-delay: inherit;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+
+        @content;
+    }
+}

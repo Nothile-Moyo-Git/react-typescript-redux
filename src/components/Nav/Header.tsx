@@ -1,14 +1,14 @@
 /**
- * Navigation component
+ * Header component
  * Currently has the logo, title and menu on the right hand side
  * Menu uses the react-burger-menu with the "scale-rotate" option chosen
  */
 
 import { NavLink } from 'react-router-dom';
 import { GiChewedHeart } from "react-icons/gi";
-import './Navigation.scss';
+import './Header.scss';
 
-const Navigation = (props : any) => {
+const Header = (props : any) => {
 
   return (
     <header className="main-header">
@@ -24,4 +24,4 @@ const Navigation = (props : any) => {
   
 };
 
-export default Navigation;
+export default Header;

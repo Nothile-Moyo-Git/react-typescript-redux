@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import { Route, Routes, NavLink } from 'react-router-dom';
 import './App.scss';
-import Navigation from './components/Nav/Navigation';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import NavMenu from './components/Nav/NavMenu';
 import ProductsPage from './containers/Products';
 import FavoritesPage from './containers/Favorites';
 import Layout from './components/UI/Layout';
-import { scaleRotate as Menu } from 'react-burger-menu'
-import BurgerMenu from './assets/BurgerMenu';
-import { BsFillHandbagFill } from "react-icons/bs";
-import { MdFavorite } from "react-icons/md";
+import BurgerMenuIcon from './assets/BurgerMenu';
+import Header from './components/Nav/Header';
 
 const App = (props : any) => {
 
@@ -23,39 +21,17 @@ const App = (props : any) => {
 
   };
 
-  console.log(toggleMenu);
 
   return (
     <Layout>
 
-      {
-        !toggleMenu &&
-        <BurgerMenu toggleMenuHandler={toggleMenuHandler}/>
-      }
+      { !toggleMenu &&  <BurgerMenuIcon toggleMenuHandler={toggleMenuHandler}/> }
 
-      <Menu 
-        pageWrapId="page-wrap" 
-        outerContainerId="outer-wrap" 
-        right
-        onClose={toggleMenuHandler}
-        isOpen={toggleMenu}
-        className={`${toggleMenu && "fade-in"}`}
-      >
-
-        <NavLink to="/" >
-          <BsFillHandbagFill/>
-          <p>All Products</p>
-        </NavLink>
-
-        <NavLink to="/favorites">
-          <MdFavorite/>
-          <p>Favorites</p>
-        </NavLink>
-      </Menu>
+      <NavMenu toggleMenu={toggleMenu} toggleMenuHandler={toggleMenuHandler}/>
 
       <div id="page-wrap"> 
 
-        <Navigation />
+        <Header />
 
         <Routes>
           <Route path="/" element={<ProductsPage/>} />

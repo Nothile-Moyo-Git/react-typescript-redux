@@ -4,5 +4,22 @@
   padding: 1rem;
   border-radius: 5px;
   box-shadow: $box_shadow;
-  background: $brand_color_transparent;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  width: calc(50% - 1rem);
+  min-height: 300px;
+  flex-shrink: 0;
+
+  @include breakpoint(desktop){
+    width: 100%;
+  }
+
+  @include backgroundGradientEffect(){
+    background: $brand_gradient_gray;
+  }
+
+  &--pink-shadow{
+    box-shadow: $box_shadow_pink;
+  }
 }

@@ -18,13 +18,14 @@ const Products = () => {
 
     <ul className="products-list">
 
-      {productList.map((product : Product) => (
+      {productList.map((product : Product, index : number) => (
         <ProductItem
           key={product.id}
           id={product.id}
           title={product.title}
           description={product.description}
           isFav={product.isFavorite}
+          index={index}
         />
       ))}
       

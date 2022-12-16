@@ -6,7 +6,10 @@ $brand_color_pink__alt_4: #ff537e;
 $brand_color_pink__alt_5: #ec003b;
 
 $brand_color_purple: #560061;
-$brand_color_transparent: rgba(255, 255, 255, 0.1);
+$brand_color_gray: rgba( 255, 255, 255, 0.1 );
+$brand_color_gray__alt_1: rgba( 255, 255, 255, 0.03 );
+$brand_color_gray__alt_2: rgba( 255, 255, 255, 0.06 );
+$brand_color_gray__alt_3: rgba( 255, 255, 255, 0.15 );
 
 // backdrop
 $backdrop_color_one: rgb(30, 32, 42);
@@ -15,10 +18,11 @@ $backdrop_color_two: rgba(0, 0, 0);
 // box shadow
 $box_shadow: ( 0px 0px 20px 0px rgba(0,0,0,0.4) );
 $button_shadow: ( 0px 0px 15px 0px rgba(0,0,0,0.2) );
-$box_shadow_pink: (0px 0px 10px $brand_color_pink);
+$box_shadow_pink: ( 0px 0px 10px $brand_color_pink );
 
 // Gradient 1
-$brand_gradient_pink: linear-gradient(60deg, $brand_color_pink, $brand_color_pink__alt_1, $brand_color_pink__alt_2, $brand_color_pink__alt_5);
+$brand_gradient_pink: linear-gradient( 60deg, $brand_color_pink, $brand_color_pink__alt_1, $brand_color_pink__alt_2, $brand_color_pink__alt_5 );
+$brand_gradient_gray: linear-gradient( 60deg, $brand_color_gray__alt_2, $brand_color_gray, $brand_color_gray__alt_1);
 
 // Gaps
 $gap: 1rem;

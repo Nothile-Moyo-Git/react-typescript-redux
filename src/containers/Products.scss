@@ -4,6 +4,11 @@
   list-style: none;
   margin: 3rem;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
 }
 
 .placeholder {

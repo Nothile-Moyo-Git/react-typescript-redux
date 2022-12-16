@@ -1,7 +1,7 @@
 import './Card.scss';
 
 const Card = (props : any) => {
-  return <div className="card" style={props.style}>{props.children}</div>;
+  return <li className={`card ${props.className}`} style={props.style}>{props.children}</li>;
 };
 
 export default Card;

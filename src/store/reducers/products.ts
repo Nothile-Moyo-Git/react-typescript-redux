@@ -4,26 +4,26 @@ const initialState = {
   products: [
     {
       id: 'p1',
-      title: 'Red Scarf',
-      description: 'A pretty red scarf.',
+      title: ' Red Scarf',
+      description: `A beautiful, elegant, classy red scard`,
       isFavorite: false
     },
     {
       id: 'p2',
       title: 'Blue T-Shirt',
-      description: 'A pretty blue t-shirt.',
+      description: `A bold blue shirt!`,
       isFavorite: false
     },
     {
       id: 'p3',
       title: 'Green Trousers',
-      description: 'A pair of lightly green trousers.',
+      description: `Green trousers, also comes with a cameo look for a more soldier-esque feel`,
       isFavorite: false
     },
     {
       id: 'p4',
       title: 'Orange Hat',
-      description: 'Street style! An orange hat.',
+      description: `A comfortable and soft orange fishermans hat`,
       isFavorite: false
     }
   ]

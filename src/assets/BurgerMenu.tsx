@@ -6,7 +6,7 @@
 
 import "./BurgerMenu.scss";
 
-const BurgerMenu = (props : any) => {
+const BurgerMenuIcon = (props : any) => {
 
     return(
         <svg onClick={props.toggleMenuHandler} className="burger-menu" aria-hidden="true" stroke="#FFFFFF" fill="#FFFFFF" stroke-width="0" viewBox="0 0 512 512" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg">
@@ -17,4 +17,4 @@ const BurgerMenu = (props : any) => {
 
 };
 
-export default BurgerMenu;
+export default BurgerMenuIcon;

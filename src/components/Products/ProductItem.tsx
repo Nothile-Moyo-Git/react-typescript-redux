@@ -13,13 +13,13 @@ const ProductItem = (props : any) => {
 
   return (
 
-    <Card style={{ marginBottom: '1.5rem' }}>
+    <Card style={{ marginBottom: '1.5rem', animationDelay: `${props.index / 2}s` }} className={props.isFav && "card--pink-shadow"}>
 
       <div className="product-item">
 
         <h2 className={props.isFav ? 'is-fav' : ''}>{props.title}</h2>
 
-        <p className={props.isFav ? 'is-fav' : ''}>{props.description}</p>
+        <p>{props.description}</p>
 
         <button
           className={!props.isFav ? 'button-outline' : ''}
