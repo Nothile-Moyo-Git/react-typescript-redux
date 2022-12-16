@@ -3,7 +3,7 @@
 .burger-menu{
     position: absolute;
     top: 0.75rem;
-    right: 0.75rem;
+    left: 0.75rem;
     animation: fade-in 0.75s linear;
     transition: $standard_transition;
     filter: contrast(0.75);

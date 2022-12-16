@@ -16,10 +16,9 @@ const NavMenu = (props : any) => {
         <Menu 
             pageWrapId="page-wrap" 
             outerContainerId="outer-wrap" 
-            right
-            onClose={props.toggleMenuHandler}
+            onClose={() => { props.toggleMenuHandler() }}
             isOpen={props.toggleMenu}
-            className={`${props.toggleMenu && "fade-in"}`}
+            className={`${props.toggleMenu && "slide-in"}`}
         >
 
             <NavLink to="/" >

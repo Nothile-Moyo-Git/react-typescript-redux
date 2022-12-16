@@ -41,6 +41,18 @@
     
 }
 
+/*
+    Slide in animation for the burger menu on the right hand side
+*/
+@keyframes burger-menu-slide-in{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: calc(100% - 300px);
+    }
+}
+
 // Pulse hover effect
 @keyframes pulse{
     0%{ transform: scale(1); }

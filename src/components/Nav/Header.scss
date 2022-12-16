@@ -6,17 +6,13 @@
   margin: auto;
   position: relative;
   overflow: hidden;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 
-  &__background{
-    position: relative;
-    width: 400%;
-    height: 100%;
-    background: white;
-    animation: efficient-gradient 5s linear infinite;
+  @include backgroundGradientEffect(){
     background: $brand_gradient_pink;
-    bottom: 100%;
-    will-change: transform;
-    z-index: 1;
   }
 
   &__logo{
@@ -29,7 +25,7 @@
     filter: contrast(90%);
     transition: $standard_transition;
     height: 100%;
-    margin-right: auto;
+    margin-left: auto;
     padding: 0 0.5rem;
     z-index: 5;
     position: relative;

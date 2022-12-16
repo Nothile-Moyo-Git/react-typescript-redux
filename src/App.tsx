@@ -29,7 +29,7 @@ const App = (props : any) => {
 
       <NavMenu toggleMenu={toggleMenu} toggleMenuHandler={toggleMenuHandler}/>
 
-      <div id="page-wrap"> 
+      <div id="page-wrap" className={`${toggleMenu && 'rotate'}`}> 
 
         <Header />
 

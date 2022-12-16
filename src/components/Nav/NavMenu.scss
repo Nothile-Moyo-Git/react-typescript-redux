@@ -1,8 +1,5 @@
 @import "../../styles/Shared.scss";
 
-.fade-in{
-    animation: fade-in 0.5s ease-in;
-}
 
 .bm-menu{
     position: relative;
@@ -60,7 +57,7 @@
 }
 
 .bm-menu-wrap{
-    transition: transform 0.5s linear;
+    transition: all 0.5s linear;
     overflow: hidden;
 
     &:before{
