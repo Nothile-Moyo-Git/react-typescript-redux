@@ -1,6 +1,7 @@
 @import "../../styles/Shared.scss";
 
 
+
 .bm-menu{
     position: relative;
     z-index: 1100;
@@ -54,6 +55,43 @@
     position: absolute;
     width: 30px;
     height: 30px;
+}
+
+.bm-item{
+    position: relative;
+
+    &.active{
+
+        svg, p{ 
+            z-index: 1;
+        }
+
+        @include backgroundGradientEffect(){
+            background: $brand_gradient_purple;
+        }
+
+    }
+
+
+    &--close-button{
+        display: flex;
+        background: transparent;
+        box-shadow: none;
+        border: 0;
+        color: white;
+        margin: 0;
+        font-size: 1.1rem;
+        align-items: center;
+
+        svg{
+            width: 25px;
+            height: 25px;
+        }
+
+        path{
+            stroke: currentColor;
+        }
+    }
 }
 
 .bm-menu-wrap{

@@ -10,6 +10,7 @@
   width: calc(50% - 1rem);
   min-height: 300px;
   flex-shrink: 0;
+  transition: $standard_transition;
 
   @include breakpoint(desktop){
     width: 100%;
@@ -20,6 +21,10 @@
   }
 
   &--pink-shadow{
+    box-shadow: $box_shadow_pink;
+  }
+
+  @include states(){
     box-shadow: $box_shadow_pink;
   }
 }

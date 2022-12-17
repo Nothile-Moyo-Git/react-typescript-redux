@@ -23,6 +23,7 @@ button {
     &.button-outline{
         background: transparent;
         color: white;
+        box-shadow: $box_shadow_pink;
 
         @include states(){
             background: $brand_color_pink__alt_1;

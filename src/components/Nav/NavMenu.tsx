@@ -8,6 +8,7 @@ import { scaleRotate as Menu } from 'react-burger-menu';
 import { NavLink } from "react-router-dom";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
+import { GrClose } from "react-icons/gr";
 
 const NavMenu = (props : any) => {
 
@@ -20,6 +21,9 @@ const NavMenu = (props : any) => {
             isOpen={props.toggleMenu}
             className={`${props.toggleMenu && "slide-in"}`}
         >
+            <button className="bm-item--close-button" onClick={props.toggleMenuHandler}>
+                <GrClose/>
+            </button>
 
             <NavLink to="/" >
                 <BsFillHandbagFill/>

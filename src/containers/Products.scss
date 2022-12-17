@@ -8,7 +8,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   grid-column-gap: 2rem;
-  grid-row-gap: 1rem;
+
+  @include breakpoint(mobile){
+    margin: 1.5rem;
+  }
 }
 
 .placeholder {
