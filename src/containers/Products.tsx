@@ -1,6 +1,7 @@
-import { useSelector } from 'react-redux';
 import ProductItem from '../components/Products/ProductItem';
+import { ProductsContext } from '../context/products-context';
 import './Products.scss';
+import React from 'react';
 
 // Product interface to make our objects more explicit
 interface Product {
@@ -12,13 +13,14 @@ interface Product {
 
 const Products = () => {
 
-  const productList = useSelector((state : any) => state.shop.products);
+  const productList = React.useContext(ProductsContext)?.products;
 
   return (
 
     <ul className="products-list">
 
-      {productList.map((product : Product, index : number) => (
+      { productList &&
+      productList.map((product : Product, index : number) => (
         <ProductItem
           key={product.id}
           id={product.id}
@@ -27,7 +29,8 @@ const Products = () => {
           isFav={product.isFavorite}
           index={index}
         />
-      ))}
+      ))
+      }
       
     </ul>
 

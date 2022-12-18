@@ -1,14 +1,11 @@
 import './ProductItem.scss';
-import { useDispatch } from 'react-redux';
 import Card from '../UI/Card';
 import { toggleFav } from '../../store/actions/products';
 
 const ProductItem = (props : any) => {
 
-  const dispatch = useDispatch();
-
   const toggleFavHandler = () => {
-    dispatch(toggleFav(props.id));
+    // dispatch(toggleFav(props.id));
   };
 
   return (
