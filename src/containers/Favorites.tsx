@@ -1,5 +1,6 @@
-import { useSelector } from 'react-redux';
 import FavoriteItem from '../components/Favorites/FavoriteItem';
+import { ProductsContext } from '../context/products-context';
+import React from "react";
 import './Products.scss';
 
 // Product interface to make our objects more explicit
@@ -12,13 +13,16 @@ interface Product {
 
 const Favorites = () => {
 
-  const favoriteProducts = useSelector((state : any) =>
-    state.shop.products.filter((product : Product) => (product.isFavorite))
-  );
+  // Products context
+  const productsContext = React.useContext(ProductsContext);
+
+  // Filter out our favorite product
+  const favoriteProducts = productsContext?.products.filter((product : Product) => (product.isFavorite));
 
   let content = <p className="placeholder">Got no favorites yet!</p>;
 
-  if (favoriteProducts.length > 0) {
+  if (favoriteProducts && favoriteProducts.length > 0) {
+    
     content = (
       <ul className="products-list">
 
