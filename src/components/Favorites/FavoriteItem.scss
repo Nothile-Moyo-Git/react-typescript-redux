@@ -1,8 +1,14 @@
-.favorite-item h2 {
-  font-size: 1.15rem;
-  margin: 0.25rem 0;
-}
+.favorite-item{
 
-.favorite-item p {
-  margin: 0.25rem 0;
+  h2 {
+    font-size: 1.5rem;
+    margin: 0.25rem 0;
+    color: white;
+  }
+
+  p {
+    margin: 0.25rem 0;
+    font-size: 1.15rem;
+    color: white;
+  }
 }

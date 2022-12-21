@@ -1,7 +1,7 @@
 import ProductItem from '../components/Products/ProductItem';
-import { ProductsContext } from '../context/products-context';
 import './Products.scss';
 import React from 'react';
+import useStore from '../hooks-store/store';
 
 // Product interface to make our objects more explicit
 interface Product {
@@ -13,14 +13,15 @@ interface Product {
 
 const Products = () => {
 
-  const productList = React.useContext(ProductsContext)?.products;
+  // Get the first value from the store which is the Products List
+  const state = useStore()[0];
 
   return (
 
     <ul className="products-list">
 
-      { productList &&
-      productList.map((product : Product, index : number) => (
+      { state &&
+      state.products.map((product : Product, index : number) => (
         <ProductItem
           key={product.id}
           id={product.id}

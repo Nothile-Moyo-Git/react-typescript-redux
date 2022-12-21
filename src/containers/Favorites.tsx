@@ -1,6 +1,5 @@
 import FavoriteItem from '../components/Favorites/FavoriteItem';
-import { ProductsContext } from '../context/products-context';
-import React from "react";
+import useStore from '../hooks-store/store';
 import './Products.scss';
 
 // Product interface to make our objects more explicit
@@ -13,11 +12,12 @@ interface Product {
 
 const Favorites = () => {
 
-  // Products context
-  const productsContext = React.useContext(ProductsContext);
-
   // Filter out our favorite product
-  const favoriteProducts = productsContext?.products.filter((product : Product) => (product.isFavorite));
+  const state = useStore()[0];
+
+  const favoriteProducts = state.products.filter((product : any) => {
+    return product.isFavorite === true;
+  });
 
   let content = <p className="placeholder">Got no favorites yet!</p>;
 
