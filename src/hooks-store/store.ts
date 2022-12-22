@@ -5,12 +5,14 @@
 
 import { useState, useEffect } from 'react';
 
-// Defined globally so that it's not re-created
+// Variables defined here so that they are created once and used amongst the entire project
+// It runs for the entire application lifetime
+// Works as an object of objects/arrays with each one being added to the initial state if needed
 let globalState = {} as any;
 let listeners = [] as any[];
 let actions = {} as any;
 
-const useStore = () => {
+const useStore = (shouldListen : boolean = true) => {
 
     // Store that we'll use this for each component which calls, each component will have it's own state and we'll point to it later
     const setStoreState = useState<any>(globalState)[1];
@@ -36,26 +38,29 @@ const useStore = () => {
 
     // Run when component mounts and unmounts
     useEffect(() => {
-    
+     
         // Add the state function to the listeners array for each component that calls it
-        listeners.push(setStoreState);
+        shouldListen && listeners.push(setStoreState);
 
         // Executes a "clean up" function when the component unmounts
         return () => {
 
-            listeners = listeners.filter((listener : any) => {
-                return listener !== setStoreState;
-            });
+            if (shouldListen) {
+                listeners = listeners.filter((listener : any) => {
+                    return listener !== setStoreState;
+                });
+            }
             
         };
 
-    },[setStoreState]);
+    },[setStoreState, shouldListen]);
 
     // Return our hook reducer
     return[globalState, dispatch];
 
 };
 
+// Add our slices to our "global" state
 export const initStore = (userActions : any, initialState : any) => {
 
     if (initialState) {
