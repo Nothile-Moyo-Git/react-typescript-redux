@@ -1,12 +1,13 @@
 import './App.scss';
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import NavMenu from './components/Nav/NavMenu';
+import React from 'react';
 import ProductsPage from './containers/Products';
 import FavoritesPage from './containers/Favorites';
-import Layout from './components/UI/Layout';
-import BurgerMenuIcon from './assets/BurgerMenu';
-import Header from './components/Nav/Header';
+const Layout = React.lazy(() => { return import('./components/UI/Layout'); });
+const BurgerMenuIcon = React.lazy(() => { return import('./assets/BurgerMenu'); });
+const Header = React.lazy(() => { return import('./components/Nav/Header'); }) ;
+const NavMenu = React.lazy(() => { return import('./components/Nav/NavMenu'); });
 
 const App = (props : any) => {
 

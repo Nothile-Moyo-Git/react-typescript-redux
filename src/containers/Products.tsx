@@ -1,7 +1,7 @@
-import ProductItem from '../components/Products/ProductItem';
 import './Products.scss';
 import React from 'react';
 import useStore from '../hooks-store/store';
+const ProductItem = React.lazy(() => { return import('../components/Products/ProductItem'); });
 
 // Product interface to make our objects more explicit
 interface Product {
