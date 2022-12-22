@@ -1,11 +1,12 @@
 import './ProductItem.scss';
 import Card from '../UI/Card';
 import useStore from '../../hooks-store/store';
+import React from 'react';
 
-const ProductItem = (props : any) => {
+const ProductItem = React.memo((props : any) => {
 
   // Grab dispatch function
-  const dispatch = useStore()[1];
+  const dispatch = useStore(false)[1];
 
   const toggleFavorite = () => {
 
@@ -13,6 +14,7 @@ const ProductItem = (props : any) => {
     
   }
 
+  console.log("Rendering");
 
   return (
 
@@ -37,6 +39,6 @@ const ProductItem = (props : any) => {
 
   );
 
-};
+});
 
 export default ProductItem;
