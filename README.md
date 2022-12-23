@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# React TypeScript Redux application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This app was designed to be practise in creating a redux store, then using context, and then using a custom hook in order to create a custom store
 
-## Available Scripts
+### Installation & Deployment
+To start the app, download it and run `npm install` and then `npm audit fix` to help fix dependency issues.
 
-In the project directory, you can run:
+This app is deployed to Github pages and can be found here: `https://nothile-moyo-git.github.io/react-typescript-redux/`.
 
-### `npm start`
+To deploy the app, run `npm run deploy`. This run create a new build in pre-deploy and then deploy it to Github Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Explanation of App
+This app is a favourites list. Similar to a to-do app. Users can click on products that they like and it adds them to a favourites list.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+It initially did this by creating a redux store, then I moved it over to useContext and now it uses a custom hook. The custom hook initialises itself and adds objects to the globalState variable which is defined once and passed through to the highest level component.
 
-### `npm test`
+It then binds a method to update state to it and updates the list of favourites to pass through to the component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For styling, I used SCSS with BEM methodology and also used react-icons and react-parallax-tilt for the interpolating cards with glare effect.
 
-### `npm run build`
+I also optimized many of these effects by avoiding re-painting and instead using a pseudo-element and transforming it
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The custom hook is found in /app/components/hooks-store/store.ts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I also wanted to start using TypeScript in my projects as I use it on my current job and it makes the debugging process much easier once the code has been written. It substantially reduces errors.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tools and frameworks
+React.js - 18
+react-burger-menu
+react-icons ( icons are MIT licensed if referenced properly )
+SASS
+Typescript
+react-router
+react-parallax-tilt
 
-### `npm run eject`
+### Overall thoughts
+I enjoyed building this app. It wasn't designed to be very complex as I've made plenty of apps with api calls and async JavaScript already.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The concepts around global state management can definitely be complex and difficult to understand, but truly worth it.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I also learned about when to best use Redux or useContext.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+For styling, I wanted to make a tilting card with glare effect, and found the react package react-parallax-tilt that interpolates elements for you and incoorperates the glare effect. I also use my established gradient. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+For the menu, I use react-burger-menu as it has a really cool slide-out feature.
 
-## Learn More
+Implementing TypeScript was also a lot easier since I use it at work and I've been learning about webpack.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+So yeah, definitely a challenge but absolutely worth doing :).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+I think the next app will finally be unit testing!
+
+### Disclaimers
+The icons used on this site can be found in react-icons. All credit goes to the wonderful authors who created the assets.
+
+You can find the link for their package here: `https://react-icons.github.io/react-icons`
